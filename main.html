@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>C�mo hacer un arreglo de puntos</title>
+  </head>
+
+  <body>
+
+    <!-- Archivo con la implementaci�n  en javascript -->
+    <script src="puntos.js"></script>
+
+    <p>
+      <input id="color" type="color" onchange="cambiarColor()" /> <!-- Indicar el color de pintado --> 
+      <input type="button" value="Reiniciar" onclick="reiniciar()" /> <!-- comenzar de nuevo -->
+      <input type="button" value="Ver Arreglo" onclick="verArreglo()" />
+    </p> <!-- ver el arreglo de puntos -->
+    <br>
+    <p>Vector de desplazamiento: &nbsp; &nbsp; &nbsp; &nbsp;  dx <input type="number" id="dx" min="1" pattern="^[0-9]+"> &nbsp; &nbsp;  dy <input type="number" id="dy" min="1" pattern="^[0-9]+"> <button id="desplazamiento" onclick="Traslado()">Trasladar</button></p>
+    <p>Factor de escalamiento  : &nbsp; &nbsp; &nbsp; &nbsp;  sx <input type="number" id="sx" min="1" pattern="^[0-9]+"> &nbsp; &nbsp;  sy <input type="number" id="sy" min="1" pattern="^[0-9]+"> <button id="escalamiento" onclick="Escalado()">Escalar</button></p>
+    <p>Ángulo de rotación      : &nbsp; &nbsp; &nbsp; &nbsp;  &#952; <input type="number" id="angulo" min="1" pattern="^[0-9]+"> <button id="rotacion" onclick="Rotado()">Rotar</button></p> 
+    
+
+    <!-- Lienzo para dibujar -->
+    <canvas id="lienzo" width="400" height="400" onmousedown="dibujar(event)" style="border: 1px solid;"> 
+    </canvas> <!-- La funci�n dibujar se ejecuta cada que se hace clic sobre el lienzo -->
+
+  </body>
+
+</html>
